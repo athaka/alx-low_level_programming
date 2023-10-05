@@ -1,8 +1,7 @@
 #include <stdio.h>
-
-/*
-   Print an output using 'puts' 
-   Return: 0 (Success) 
+/**
+ * main - Print an output using 'puts' 
+ * Return: 0 (Success) 
 */
 int main(void)
 {
