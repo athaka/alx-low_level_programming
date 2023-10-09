@@ -1,2 +1,0 @@
-3-name~#!/bin/bash
-gcc -S $CFILE
