@@ -14,8 +14,7 @@ int main(void)
 		for (n2 = 0; n2 <= 9; n2++)
 		{
 			putchar('0' + n1);
-			putchar(',');
-			putchar(' ');
+			putchar(',' + ' ');
 			putchar('0' + n2);
 		}
 	}
