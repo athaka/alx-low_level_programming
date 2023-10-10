@@ -6,8 +6,10 @@
   */
 int main(void)
 {
+	int i;
+
 	/* use a for loop to iterate from 0 to 9 */
-	for (int i = 0; i <= 9; i++)
+	for (i = 0; i <= 9; i++)
 	{
 		/* print the current number followed by a new line */
 		printf("%d", i);
