@@ -6,16 +6,16 @@
   */
 int main(void)
 {
-	int n1, n2;
+	int n;
 
 	/* use a for loop to iterate from 0 to 15 */
-	for (n1 = 0; n1 <= 9; n1++)
+	for (n = 0; n <= 9; n++)
 	{
-		for (n2 = 0; n2 <= 9; n2++)
+		putchar('0' + n);
+		if (n != 9)
 		{
-			putchar('0' + n1);
-			putchar(',' + ' ');
-			putchar('0' + n2);
+			putchar(',');
+			putchar(' ');
 		}
 	}
 	putchar('\n');
