@@ -9,12 +9,13 @@
 int main(void)
 {
 	int n;
+	int l;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 
-	/* Declaration of variables*/
-	int l = n % 10;
+	/* Assigning variables*/
+	l = n % 10;
 
 	/* check the boolean condition */
 	if (l == 0)
