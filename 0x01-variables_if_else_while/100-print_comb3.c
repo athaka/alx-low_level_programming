@@ -9,15 +9,19 @@ int main(void)
 	int n1, n2;
 
 	/* use a for loop tio iterate from 0 to 9 for the first digits */
-	for (n1 = 0; n1 <= 9; n1++)
+	for (n1 = 0; n1 <= 8; n1++)
 	{
 	/* nested for loop to iterate from 0 to 9 for the second digits */
 		for (n2 = n1 + 1; n2 <= 9; n2++)
 		{
 			putchar('0' + n1);
 			putchar('0' + n2);
-			putchar(',');
-			putchar(' ');
+			/* return last combination without a comma */
+			if (n1 != 8 || n2 != 9)
+			{
+				putchar(',');
+				putchar(' ');
+			}
 		}
 	}
 	putchar('\n');
