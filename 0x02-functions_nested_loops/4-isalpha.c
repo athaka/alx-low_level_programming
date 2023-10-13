@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * _isalpha - A function that prints the sign of any number
- * @c: The integer to be checked for
+ * _isalpha - A function that checks for alphabetic character
+ * @c: The character to be checked for
  * Return: Always 0.
  */
 

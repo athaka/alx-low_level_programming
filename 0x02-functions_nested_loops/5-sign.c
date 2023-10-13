@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * print_sign - A function that checks for alphabetic character
- * @n: The character to be checked for
+ * print_sign - A function that prints the sign of any number
+ * @n: The integer to be checked for
  * Return: Always 0.
  */
 
