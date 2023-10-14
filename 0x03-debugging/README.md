@@ -6,6 +6,6 @@ _completed in C programming language on Linux OS._
 
 ## Expect to see:
 
-1.
+1. Debuging main
 2.
 3.
