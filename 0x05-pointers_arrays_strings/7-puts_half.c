@@ -9,21 +9,17 @@
 
 void puts_half(char *str)
 {
+	/* calculate the lenght of the string */
 	int l = strlen(str);
-	int start_index;
+	/* calculate the starting index of the second half*/
+	int start_index = (l + 1) / 2;
+	int i;
 
-	if (l % 2 == 0)
+	/* loop through the starting from start_index to end */
+	/* and print each character. */
+	for (i = start_index; i < l; i++)
 	{
-		start_index = l / 2;
-	}
-	else
-	{
-		start_index = (l - 1) / 2;
-	}
-	while (str[start_index] != '\0')
-	{
-		_putchar(str[start_index]);
-		start_index++;
+		_putchar(str[i]);
 	}
 	_putchar('\n');
 }
