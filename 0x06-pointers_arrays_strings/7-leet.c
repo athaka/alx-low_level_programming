@@ -7,43 +7,16 @@
 
 char *leet(char *str)
 {
-	/* store the original pointer to the string. */
-	char *original = str;
-	char c;
+	int i, j;
+	char subs[] = "aAeEoOtTlL";
+	char le[] = "43071";
 
-	while (*str)
+	i = 0;
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		/* Get the current character. */
-		c = *str;
-		/* Using a single 'if' statement, we'll check and encode characters. */
-		if (c == 'a' || c == 'A')
-		{
-			*str = '4';
-		}
-		else if (c == 'e' || c == 'E')
-		{
-			*str = '3';
-		}
-		else if (c == 'o' || c == 'O')
-		{
-			*str = '0';
-		}
-		else if (c == 't' || c == 'T')
-		{
-			*str = '7';
-		}
-		else if (c == 'l' || c == 'L')
-		{
-			*str = '1';
-		}
-		else
-		{
-			*str = c;
-		}
-		/* Move to the next character. */
-		str++;
+		for (j = 0; subs[j] != '\0'; j++)
+			if (str[i] == subs[j])
+				str[i] = le[j / 2];
 	}
-	/* Return the modified string. */
-	return (original);
-	_putchar('\n');
+	return (str);
 }
