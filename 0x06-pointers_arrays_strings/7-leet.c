@@ -36,6 +36,10 @@ char *leet(char *str)
 		{
 			*str = '1';
 		}
+		else
+		{
+			*str = c;
+		}
 		/* Move to the next character. */
 		str++;
 	}
