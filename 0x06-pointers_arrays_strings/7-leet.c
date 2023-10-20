@@ -43,7 +43,7 @@ char *leet(char *str)
 		/* Move to the next character. */
 		str++;
 	}
-	_putchar('\n');
 	/* Return the modified string. */
 	return (original);
+	_putchar('\n');
 }
