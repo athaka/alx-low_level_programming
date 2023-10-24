@@ -16,23 +16,21 @@ char *_strstr(char *haystack, char *needle)
 		return (NULL);
 	}
 
-	h = haystack, n = needle;
-
-	while (*h != '\0')
+	while (*haystack != '\0')
 	{
-		if (*h == *n)
+		h = haystack, n = needle;
+
+		while (*n != '\0' && *h == *n)
 		{
-			while (*n != '\0')
-			{
-				return (h);
-			}
+			h++;
 			n++;
 		}
+
 		if (*n == '\0')
 		{
-			return (h);
+			return (haystack);
 		}
-		h++;
+		haystack++;
 	}
 	return (NULL);
 }
