@@ -3,6 +3,7 @@
 
 /**
  * main - A function that prints its own name
+ * @argc: argument count represents number of  arguments
  * @argv: argument vector containing actual argument
  *
  * Return: always 0
