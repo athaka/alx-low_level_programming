@@ -4,7 +4,7 @@
 #include <string.h>
 
 /**
- * main - A function that duplicate a given string
+ * _strdup - A function that duplicate a given string
  * @str: A pointer to a string
  *
  * Return: always 0
