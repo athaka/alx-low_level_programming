@@ -11,9 +11,12 @@
 
 void print_name(char *name, void (*f)(char *))
 {
-	if (name == NULL)
+	if (f == NULL)
 	{
 		exit(EXIT_FAILURE);
 	}
-	f(name);
+	if (*name != '\0')
+	{
+		f(name);
+	}
 }
