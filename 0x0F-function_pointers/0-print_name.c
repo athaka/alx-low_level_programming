@@ -15,8 +15,5 @@ void print_name(char *name, void (*f)(char *))
 	{
 		exit(EXIT_FAILURE);
 	}
-	if (*name != '\0')
-	{
-		f(name);
-	}
+	f(name);
 }
