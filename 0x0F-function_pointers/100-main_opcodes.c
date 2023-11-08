@@ -2,60 +2,29 @@
 #include <stdio.h>
 
 /**
- * print_main_opcodes - Function to print opcode
- * @bytes: An argument
- *
- * Return: Nothing.
+ * main - print the opcode of it own function
+ * @argc: number of command line arguments
+ * @argv: array of command line arguments
+ * Return: Exit 1 if one arg is not correct, 2 if byte is negative.
  */
-
-void print_main_opcodes(int bytes)
+int main(int argc, char *argv[])
 {
-	__asm__ (
-			".intel_syntax noprefix\n\t"
-			"label_main:\n\t"
-			"nop\n\t"
-			"nop\n\t"
-			"nop\n\t"
-			".att_syntax prefix\n\t"
-			);
-	int i;
-	unsigned char *ptr = (unsigned char *)&main;
+	short bytes, x;
 
+	if (argc != 2)
+	{
+		printf("Error\n");
+		exit(1);
+	}
+	bytes = atoi(argv[1]);
 	if (bytes < 0)
 	{
 		printf("Error\n");
 		exit(2);
 	}
-	for (i = 0; i < bytes; i++)
-	{
-		printf("%02x", ptr[i]);
-		if (i < bytes - 1)
-		{
-			printf(" ");
-		}
-	}
-	printf("\n");
-}
-
-/**
- * main - check the code
- * @argc: argument count
- * @argv: argument vector
- *
- * Return: Always 0.
- */
-
-int main(int argc, char *argv[])
-{
-	int bytes;
-
-	if (argc != 2)
-	{
-		printf("Error\n");
-		return (1);
-	}
-
-	bytes = atoi(argv[1]);
-	print_main_opcodes(bytes);
-	return (0);
+	printf("%02x", *((unsigned char *) (main)));
+	for (x = 1; x < bytes; ++x)
+		printf(" %02x", *((unsigned char *) (main + x)));
+	putchar('\n');
+	exit(EXIT_SUCCESS);
 }
